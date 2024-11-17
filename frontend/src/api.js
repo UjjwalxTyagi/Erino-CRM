@@ -1,8 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-  baseURL:
-    process.env.REACT_APP_API_URL || "http://localhost:5000/api/contacts", // Fallback for local development
+  baseURL: process.env.REACT_URL || "http://localhost:5000/api/contacts",
 })
 
 export const getContacts = () => api.get("/")
